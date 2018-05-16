@@ -1,37 +1,53 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
     return (
         <div>
             <nav>
                 <div className="nav-wrapper red darken-3">
-                    <a href="#!" className="brand-logo center ">Marvel Hero Search</a>
-                    {/*<a href="#" data-target="mobile-demo" className="sidenav-trigger"><i*/}
-                    {/*className="material-icons">menu</i></a>*/}
-                    {/*<ul className="right hide-on-med-and-down">*/}
-                    {/*<li><a href="sass.html">Sass</a></li>*/}
-                    {/*<li><a href="badges.html">Components</a></li>*/}
-                    {/*<li><a href="collapsible.html">Javascript</a></li>*/}
-                    {/*<li><a href="mobile.html">Mobile</a></li>*/}
-                    {/*</ul>*/}
+                    <div className="hide-on-small-only">
+                        <Link to="/" className="brand-logo center">Marvel Hero Search</Link>
+                    </div>
+                    <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i
+                        className="material-icons">menu</i></a>
+                    <ul className="left hide-on-med-and-down">
+                        <li>
+                            <Link to='/'>
+                                <i
+                            className="material-icons">home
+                                </i>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to='/search'>
+                                <i
+                                    className="material-icons">search
+                                </i>
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </nav>
 
-            {/*<ul*/}
-            {/*className="sidenav"*/}
-            {/*id="mobile-demo">*/}
-            {/*< li>< a*/}
-            {/*href="sass.html"> Sass </a></*/}
-            {/*li>*/}
-            {/*< li>< a*/}
-            {/*href="badges.html"> Components </a></*/}
-            {/*li>*/}
-            {/*< li>< a*/}
-            {/*href="collapsible.html"> Javascript </a></*/}
-            {/*li>*/}
-            {/*< li>< a*/}
-            {/*href="mobile.html"> Mobile </a></li>*/}
-            {/*</ul>*/}
+            <ul
+                className="sidenav"
+                id="mobile-demo">
+                <li>
+                    <Link to='/'>
+                        <i
+                            className="material-icons">home
+                        </i>
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/search'>
+                        <i
+                            className="material-icons">search
+                        </i>
+                    </Link>
+                </li>
+            </ul>
         </div>
     )
 };
