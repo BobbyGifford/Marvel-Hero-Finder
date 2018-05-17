@@ -40,9 +40,10 @@ const mapOverHeroes = () => {
                         <span className="card-title">{hero.title}</span>
                         <p>{hero.description}</p>
                     </div>
-                    {/*<div className="card-action">*/}
-                    {/*<a href="#">This is a link</a>*/}
-                    {/*</div>*/}
+                    <div className="card-action">
+                    <a className="waves-effect waves-light red darken-3 btn white-text"
+                       href="#">View {hero.title}'s Profile</a>
+                    </div>
                 </div>
             </div>
         )

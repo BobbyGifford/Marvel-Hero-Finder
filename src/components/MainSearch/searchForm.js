@@ -3,7 +3,8 @@ import React from 'react'
 const SearchForm = ({onChange, handleSubmit, inputValue}) => {
     return (
         <div>
-            Search any character by name (example Hulk)
+            <h4>Search any character by name</h4>
+            <p>Example: Spider-Man</p>
 
             <form className="col s12" onSubmit={handleSubmit}>
                 <div className="row">

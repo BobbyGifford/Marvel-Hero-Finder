@@ -38,7 +38,7 @@ class MainSearch extends Component {
                 console.log(res.data.data.results[0]);
                 let rawData = res.data.data.results[0];
 
-                if(rawData === null || rawData === undefined){
+                if (rawData === null || rawData === undefined) {
                     this.setState({name: "Sorry No Result", description: "Please check your spelling."})
                 } else {
                     this.setState({
