@@ -3,6 +3,7 @@ import thorImg from "../../images/thor_1.jpg"
 import ironmanImg from "../../images/ironman_1.jpg"
 import captainamericaImg from "../../images/captainamerica_1.jpg"
 import hulkImg from "../../images/hulk_1.jpg"
+import {Link} from 'react-router-dom'
 import "./popularHeroes.css"
 
 const popularHeroes = [
@@ -31,7 +32,7 @@ const popularHeroes = [
 const mapOverHeroes = () => {
     return popularHeroes.map(hero => {
         return (
-            <div className="col s12 m3">
+            <div className="col s12 m3" key={hero.title}>
                 <div className="card">
                     <div className="card-image">
                         <img className="popular-card" src={hero.image} alt={hero.title}/>
@@ -41,8 +42,8 @@ const mapOverHeroes = () => {
                         <p>{hero.description}</p>
                     </div>
                     <div className="card-action">
-                    <a className="waves-effect waves-light red darken-3 btn white-text"
-                       href="#">View {hero.title}'s Profile</a>
+                    <Link className="waves-effect waves-light red darken-3 btn white-text"
+                       to={`/profile/${hero.title}`}>View {hero.title}'s Profile</Link>
                     </div>
                 </div>
             </div>

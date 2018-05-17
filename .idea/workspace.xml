@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27fb1f47-02d8-4ccd-a837-e07c9c3649c6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/HeroProfile/heroProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainSearch/mainSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainSearch/mainSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainSearch/searchForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainSearch/searchForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeroProfile/heroProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeroProfile/heroProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/MainRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/MainRouter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popularHeroes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="popularHeroes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+            <state relative-caret-position="272">
+              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -63,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heroProfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="heroProfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HeroProfile/heroProfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="7" column="99" selection-start-line="7" selection-start-column="99" selection-end-line="7" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -105,10 +101,10 @@
         <option value="$PROJECT_DIR$/src/components/MainSearch/mainSearch.css" />
         <option value="$PROJECT_DIR$/src/components/MainSearch/mainSearch.js" />
         <option value="$PROJECT_DIR$/src/components/MainSearch/searchForm.js" />
-        <option value="$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js" />
         <option value="$PROJECT_DIR$/src/components/HeroProfile.js" />
         <option value="$PROJECT_DIR$/src/router/MainRouter.js" />
         <option value="$PROJECT_DIR$/src/components/HeroProfile/heroProfile.js" />
+        <option value="$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js" />
       </list>
     </option>
   </component>
@@ -170,6 +166,13 @@
               <item name="marvel-materializecss" type="b2602c69:ProjectViewProjectNode" />
               <item name="marvel-materializecss" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marvel-materializecss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marvel-materializecss" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -221,12 +224,12 @@
       <updated>1526419111489</updated>
       <workItem from="1526419112632" duration="8922000" />
       <workItem from="1526499648144" duration="14492000" />
-      <workItem from="1526572306436" duration="8922000" />
+      <workItem from="1526572306436" duration="9656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32336000" />
+    <option name="totallyTimeSpent" value="33070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="-4" width="1867" height="1084" extended-state="6" />
@@ -401,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -422,16 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="107" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -452,10 +438,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HeroProfile/heroProfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="119">
+          <caret line="7" column="99" selection-start-line="7" selection-start-column="99" selection-end-line="7" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PopularHeroes/popularHeroes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
