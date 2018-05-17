@@ -2,12 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import "./home.css"
 
-
 const Home = () => {
     return (
-        <div className="container">
+        <div className="container home-bg">
             <div className="row center-align">
-                <h1>Welcome</h1>
+                <h1>Marvel Heroes</h1>
+                <hr />
                 <div className="col s12">
                     <Link className="btn btn-feature waves-effect waves-light red darken-3 btn white-text"
                           to="/search">
