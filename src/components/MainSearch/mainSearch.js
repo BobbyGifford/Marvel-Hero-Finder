@@ -47,7 +47,7 @@ class MainSearch extends Component {
                         mainImg: rawData.thumbnail.path + ".jpg"
                     });
                 }
-            }, this.setSearched(true));
+            }, this.setState({searched: true}));
 
     };
 
