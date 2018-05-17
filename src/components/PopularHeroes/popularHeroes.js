@@ -1,6 +1,8 @@
 import React from 'react'
 import thorImg from "../../images/thor_1.jpg"
 import ironmanImg from "../../images/ironman_1.jpg"
+import captainamericaImg from "../../images/captainamerica_1.jpg"
+import hulkImg from "../../images/hulk_1.jpg"
 import "./popularHeroes.css"
 
 const popularHeroes = [
@@ -13,7 +15,17 @@ const popularHeroes = [
         title: "Iron Man",
         description: "Iron Man's description",
         image: ironmanImg
-    }
+    },
+    {
+        title: "Captain America",
+        description: "Captain America's description",
+        image: captainamericaImg
+    },
+    {
+        title: "Hulk",
+        description: "Hulk's description",
+        image: hulkImg
+    },
 ];
 
 const mapOverHeroes = () => {
