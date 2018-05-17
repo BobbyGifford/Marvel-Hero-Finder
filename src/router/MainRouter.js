@@ -4,6 +4,7 @@ import createHistory from 'history/createBrowserHistory'
 import MainSearch from '../components/MainSearch/mainSearch'
 import Home from '../components/Home/home'
 import Navbar from '../components/Navbar/navbar'
+import PopularHeroes from '../components/PopularHeroes/popularHeroes'
 
 export const history = createHistory();
 
@@ -12,8 +13,9 @@ const MainRouter = () => {
         <Router history={history}>
             <div>
                 <Navbar/>
-                <Route exact path="/" component={Home} />
-                <Route path="/search" component={MainSearch} />
+                <Route exact path="/" component={Home}/>
+                <Route path="/search" component={MainSearch}/>
+                <Route path="/popular" component={PopularHeroes}/>
             </div>
         </Router>
     )
