@@ -16,7 +16,7 @@ const style = {
         maxWidth: "98vw"
     },
     background: {
-        height: '100vh',
+        height: '112vh',
         backgroundImage: `url(${bgImage})`
     }
 };

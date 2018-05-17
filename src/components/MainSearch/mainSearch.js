@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 import SearchFrom from './searchForm'
 import CharacterCard from '../CharacterCard/characterCard'
 import axios from 'axios'
-
 import apiBase from "../../config/apibase"
 import apiKey from "../../config/apikey"
+import './mainSearch.css'
 
 class MainSearch extends Component {
     constructor() {
@@ -53,7 +53,7 @@ class MainSearch extends Component {
 
     render() {
         return (
-            <div className="container center" style={{marginTop: "5vh"}}>
+            <div className="container center bg-area" style={{marginTop: "5vh"}}>
 
                 <SearchFrom onChange={this.changeHandler} handleSubmit={this.handleSubmit}
                             inputValue={this.state.nameSearch}/>
