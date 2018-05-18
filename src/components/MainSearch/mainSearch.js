@@ -36,7 +36,7 @@ class MainSearch extends Component {
         this.setSearched(false);
         axios.get(`${apiBase.base}/characters?apikey=${apiKey.key}&name=${this.state.nameSearch}`)
             .then((res) => {
-
+                console.log(res.data);
                 console.log(res.data.data.results[0]);
                 let rawData = res.data.data.results[0];
 

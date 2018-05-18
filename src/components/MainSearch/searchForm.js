@@ -4,7 +4,7 @@ const SearchForm = ({onChange, handleSubmit, inputValue}) => {
     return (
         <div>
             <h4>Search any character by name</h4>
-            <p>Example: Spider-Man</p>
+            <p>Examples: Spider-Man, Thanos, Rhino</p>
 
             <form className="col s12" onSubmit={handleSubmit}>
                 <div className="row">
@@ -24,7 +24,6 @@ const SearchForm = ({onChange, handleSubmit, inputValue}) => {
                     </div>
                 </div>
             </form>
-
         </div>
     )
 };
