@@ -47,10 +47,11 @@ class MainSearch extends Component {
                         name: rawData.name,
                         description: rawData.description,
                         mainImg: rawData.thumbnail.path + ".jpg",
-                        events: rawData.events.items
+                        events: rawData.events.items,
+                        searched: true
                     });
                 }
-            }, this.setState({searched: true}));
+            });
 
     };
 
@@ -61,19 +62,36 @@ class MainSearch extends Component {
                 <SearchFrom onChange={this.changeHandler} handleSubmit={this.handleSubmit}
                             inputValue={this.state.nameSearch}/>
 
-                {this.state.searched ?
-                    <CharacterCard
-                        name={this.state.name}
-                        description={this.state.description}
-                        image={this.state.mainImg}/> : null}
-                <h3>Events</h3>
-                {this.state.events.map(event => {
-                    return (
-                        <div className="col s3" key={event.name}>
-                            <Link to={`/event/${event.name}`}>{event.name}</Link>
+                {this.state.searched === true ?
+                    <div>
+                        <CharacterCard
+                            name={this.state.name}
+                            description={this.state.description}
+                            image={this.state.mainImg}/>
+
+                        <h3>Events</h3>
+                        {this.state.events.map(event => {
+                            return (
+                                <div className="col s3" key={event.name}>
+                                    <Link to={`/event/${event.name}`}>{event.name}</Link>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    : <div>
+                        {this.state.searched !== null ?
+                            <div>
+                                <h2>Loading</h2>
+                                <div className="progress">
+                                    <div className="indeterminate"/>
+                                </div>
+                            </div>
+                            :
+                            null
+                        }
                         </div>
-                    )
-                })}
+                }
 
 
             </div>
