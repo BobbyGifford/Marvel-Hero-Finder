@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import apiKey from "../../config/apikey";
 import apiBase from "../../config/apibase";
 
@@ -12,7 +13,8 @@ class HeroProfile extends Component {
             name: null,
             image: null,
             description: null,
-            events: []
+            events: [],
+            id: null
         }
     }
 
@@ -23,20 +25,20 @@ class HeroProfile extends Component {
                 console.log(res.data.data.results[0]);
                 let rawData = res.data.data.results[0];
                 this.setState({
+                    id: rawData.id,
                     description: rawData.description,
                     image: `${rawData.thumbnail.path}.jpg`,
-                    events: rawData.events.items
+                    events: rawData.events.items,
+                    loading: false
                 })
-            }).then(
-            this.setState({loading: false})
-        )
+            })
     }
 
     render() {
         return (
             <div className="container">
                 <div className="center" style={{
-                    backgroundColor: 'rgba(240, 248, 255, 0.8)',
+                    backgroundColor: 'rgba(240, 248, 255, 0.9)',
                     paddingBottom: '2vh',
                     paddingLeft: '2vw',
                     paddingRight: '2vw',
@@ -52,7 +54,7 @@ class HeroProfile extends Component {
                             {this.state.events.map(event => {
                                 return (
                                     <div className="col s3" key={event.name}>
-                                        {event.name}
+                                        <Link to={`/event/${event.name}`}>{event.name}</Link>
                                     </div>
                                 )
                             })}
