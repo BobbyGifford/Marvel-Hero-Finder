@@ -45,7 +45,14 @@ class HeroProfile extends Component {
                     maxHeight: '100vh'
                 }}>
                     {this.state.loading === true ?
-                        <div>loading</div> :
+
+                        <div>
+                            <h2>Loading</h2>
+                            <div className="progress">
+                                <div className="indeterminate"/>
+                            </div>
+                        </div>
+                        :
                         <div className="row">
                             <h1>{this.props.match.params.id}</h1>
                             <img style={{maxWidth: '40%'}} src={`${this.state.image}`} alt={this.state.name}/>

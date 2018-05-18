@@ -13,7 +13,9 @@ class Event extends Component {
             description: null,
             start: null,
             characters: [],
-            image: null
+            image: null,
+            firstLoader: true,
+            secondLoader: true,
         }
     }
 
@@ -31,7 +33,8 @@ class Event extends Component {
                     start: formatDate,
                     description: rawData.description,
                     image: rawData.thumbnail.path + "." + rawData.thumbnail.extension,
-                    id: rawData.id
+                    id: rawData.id,
+                    firstLoader: false
                 });
                 this.searchForCharacters(rawData.id)
             });
@@ -52,7 +55,10 @@ class Event extends Component {
                     let newCharacter = {name, description, image};
                     newCharactersList.push(newCharacter);
                 }
-                this.setState({characters: newCharactersList});
+                this.setState({
+                    characters: newCharactersList,
+                    secondLoader: false
+                });
                 console.log(newCharactersList)
             })
 
@@ -61,7 +67,18 @@ class Event extends Component {
     render() {
         return (
             <div>
-                <div className="center" style={{
+                {
+                    this.state.firstLoader === true ?
+                        <div>
+                            <h3>Loading Event</h3>
+                            <div className="progress">
+                                <div className="indeterminate"/>
+                            </div>
+                        </div>
+
+                        :
+
+                    <div className="center" style={{
                     backgroundColor: 'rgba(240, 248, 255, 0.9)',
                     paddingBottom: '2vh',
                     paddingLeft: '2vw',
@@ -73,21 +90,35 @@ class Event extends Component {
                     <h6>Started on: {this.state.start}</h6>
                     <p>{this.state.description}</p>
                     <h5>Characters</h5>
-                </div>
+                    </div>
 
-                <div className="row">
-                    {this.state.characters.map((character) => {
-                        return (
-                            <div className="col s12 m3"
-                                 key={character.name}
-                                style={{height: "40vh"}}>
-                                <CharacterCard name={character.name}
-                                               image={character.image}/>
-                            </div>
-                        )
-                    })
-                    }
-                </div>
+                }
+
+                { this.state.secondLoader === true ?
+                    <div>
+                        <h3>Loading Characters</h3>
+                        <div className="progress">
+                            <div className="indeterminate"/>
+                        </div>
+                    </div>
+
+                    :
+
+                    <div className="row">
+                        {this.state.characters.map((character) => {
+                            return (
+                                <div className="col s12 m3"
+                                     key={character.name}
+                                     style={{height: "40vh"}}>
+                                    <CharacterCard name={character.name}
+                                                   image={character.image}/>
+                                </div>
+                            )
+                        })
+                        }
+                    </div>
+
+                }
 
             </div>
         )

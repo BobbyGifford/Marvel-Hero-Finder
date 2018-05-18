@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import SearchFrom from './searchForm'
 import CharacterCard from '../CharacterCard/characterCard'
+import {Link} from "react-router-dom"
 import axios from 'axios'
 import apiBase from "../../config/apibase"
 import apiKey from "../../config/apikey"
@@ -12,7 +13,8 @@ class MainSearch extends Component {
 
         this.state = {
             nameSearch: '',
-            searched: null
+            searched: null,
+            events: []
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,7 +46,8 @@ class MainSearch extends Component {
                     this.setState({
                         name: rawData.name,
                         description: rawData.description,
-                        mainImg: rawData.thumbnail.path + ".jpg"
+                        mainImg: rawData.thumbnail.path + ".jpg",
+                        events: rawData.events.items
                     });
                 }
             }, this.setState({searched: true}));
@@ -63,6 +66,15 @@ class MainSearch extends Component {
                         name={this.state.name}
                         description={this.state.description}
                         image={this.state.mainImg}/> : null}
+                <h3>Events</h3>
+                {this.state.events.map(event => {
+                    return (
+                        <div className="col s3" key={event.name}>
+                            <Link to={`/event/${event.name}`}>{event.name}</Link>
+                        </div>
+                    )
+                })}
+
 
             </div>
 
